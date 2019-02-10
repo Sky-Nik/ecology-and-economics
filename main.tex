@@ -162,4 +162,219 @@
     \[ \lambda_L = 2, \quad X_L = \left( 24, 4, 1 \right)^T. \]
 \end{solution}
 
+\section{Моделювання взаємодії біологічних видів}
+
+\subsection{Модель ``хижак-жертва''}
+
+Стосунки з умовною характеристикою ``хижак-жертва'' є найбільш істотними для функціонування екосистеми. В основу відповідної моделі покладені ідеалізовані уявлення про характер внутрішньо- та між-видових стосунків у спільноті що складається з виду ``хижак'' і виду ``жертва'':
+\begin{enumerate}
+    \item За умови відсутності хижака популяція жертви розмножується експоненціально.
+    \item За відсутності жертви популяція хижака експоненціально вимирає.
+    \item Сумарна кількість біомаси жертв, що споживається популяцією хижака за одиницю часу лінійно залежить від густини популяції жертви та від щільності популяції хижака.
+    \item Біомаса жертви, що споживається популяцією хижака перетворюється з певним коефіцієнтом у біомасу хижака.
+    \item Будь-які додаткові фактори, що впливають на динаміку популяцій жертви та хижака відсутні.
+\end{enumerate}
+
+За цих припущень дана модель може бути описана у вигляді:
+\begin{equation}
+    \label{eq:2.1}
+    \left\{
+\begin{aligned}
+    \frac{\diff x}{\diff t} &= \epsilon_1 x - \gamma_1 x y, \\
+    \frac{\diff y}{\diff t} &= - \epsilon_2 y + \gamma_2 x y, 
+\end{aligned}
+\right.
+\end{equation}
+де $x$ -- густина популяції жертви, $y$ -- густина популяції хижака, $\epsilon_1 > 0$ -- швидкість розмноження жертви за відсутності хижака, $\epsilon_2 > 0$ -- швидкість загибелі хижака за відсутності жертви, $\gamma_1 > 0$ -- питома швидкість споживання популяцією хижака популяції жертви за одиничної густоти обох популяцій, а $\gamma_2 > 0$ -- коефіцієнт перетворення біомаси жертви, що була спожита хижаком на його біомасу. \\
+
+Для знаходження стаціонарних станів системи \eqref{eq:2.1} розв'язуємо СЛАР
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \epsilon_1 x - \gamma_1 x y &= 0, \\
+    \epsilon_1 x - \gamma_1 x y &= 0.
+\end{aligned}
+\right.
+\end{equation}
+
+Маємо дві точки:
+\begin{enumerate}
+    \item $x^* = y^* = 0$, тривіальна.
+    \item $x^* = \epsilon_2 / \gamma_2$, $y^* = \epsilon_1 / \gamma_1$, не тривіальна.
+\end{enumerate}
+
+Проаналізуємо знайдені стаціонарні стани на стійкість. Для цього лінеаризуємо в околі кожної точки нашу систему: в загальному випадку в околі $(x_0, y_0)$:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff x}{\diff t} = (\epsilon_1 - \gamma_1 y_0) \cdot (x - x_0) - \gamma_1  x_0 \cdot (y - y_0), \\
+    \frac{\diff y}{\diff t} = \gamma_2  x_0 \cdot (y - y_0) - (\epsilon_2 - \gamma_2 y_0) \cdot (x - x_0),
+\end{aligned}
+\right.
+\end{equation}
+
+Для $(0,0)$ маємо $\lambda_1 = \epsilon_1$, $\lambda_2 = - \epsilon_2$, сідло. \\
+
+Для $(\epsilon_2 / \gamma_2, \epsilon_1 / \gamma_1)$ маємо 
+
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff x}{\diff t} = - \frac{\gamma_1 \epsilon_2}{\gamma_2} \cdot \left(y - \frac{\epsilon_1}{\gamma_1} \right), \\
+    \frac{\diff y}{\diff t} = \frac{\gamma_2 \epsilon_1}{\gamma_1} \cdot \left(x - \frac{\epsilon_2}{\gamma_2} \right).
+\end{aligned}
+\right.
+\end{equation}
+
+Робимо заміну змінних $x - \epsilon_2 / \gamma_2 = u$, $y - \epsilon_1 / \gamma_1 = v$, тоді
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff u}{\diff t} = - \frac{\gamma_1 \epsilon_2}{\gamma_2} \cdot v, \\
+    \frac{\diff v}{\diff t} = \frac{\gamma_2 \epsilon_1}{\gamma_1} \cdot u,
+\end{aligned}
+\right.
+\end{equation}
+
+Знаходимо характеристичний многочлен як визначника і власні числа як його корені:
+
+\begin{equation}
+    \begin{vmatrix} - \lambda & - \frac{\gamma_1 \epsilon_2}{\gamma_2} \\ \frac{\gamma_2 \epsilon_1}{\gamma_1} & - \lambda \end{vmatrix} = \lambda^2 + \frac{\gamma_1 \epsilon_2}{\gamma_2} \cdot \frac{\gamma_2 \epsilon_1}{\gamma_1} = \lambda^2 + \epsilon_1 \epsilon_2,
+\end{equation}
+
+звідки $\lambda_{1, 2} = \pm i \sqrt{\epsilon_1 \epsilon_2}$ -- центр, бо $Re \lambda = 0$. \\
+
+Нескладно знайти, що рух довкола центру буде відбуватися за еліпсами. \\
+
+Модель ``хижак-жертва'' ще носить назву модель Вольтерра.
+
+\subsection{Модель ``хижак-жертва'' з врахування внутрішньовидової конкуренції}
+
+Ця модель носить назву модель Лоткі-Вольтерра. Її модель має наступний вигляд:
+
+\begin{equation}
+    \label{eq:2.2}
+    \left\{
+\begin{aligned}
+    \frac{\diff x}{\diff t} &= \epsilon_1 x - \gamma_1 x y - \beta_1 x^2, \\
+    \frac{\diff y}{\diff t} &= - \epsilon_2 y + \gamma_2 x y, 
+\end{aligned}
+\right.
+\end{equation}
+
+Ця корекція покликана виправити експоненційний ріст. \\
+
+Проаналізуємо знайдені стаціонарні стани на стійкість:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    & x \cdot (\epsilon_1 - \gamma_1 y - \beta_1 x) = 0, \\
+    & y \cdot (- \epsilon_2 + \gamma_2 x) = 0,
+\end{aligned}
+\right.
+\end{equation}
+
+маємо три стаціонарні точки:
+\begin{enumerate}
+    \item $x^* = y^* = 0$, тривіальна.
+    \item $x^* = \epsilon_1 / \beta_1$, $y^* = 0$, напівтривіальна.
+    \item $x^* = \frac{\epsilon_2}{\gamma_2}$, $\gamma^* = \dfrac{\epsilon_1 - \gamma_2 - \beta_1 \epsilon_2}{\gamma_1 \gamma_2} > 0$, або 
+    \begin{equation}
+        \label{eq:2.3}
+        \frac{\epsilon_1}{\epsilon_2} > \frac{\beta_1}{\gamma_2}.
+    \end{equation} 
+\end{enumerate}
+
+Знову-ж таки, лінеаризована система в околі точки $(x_0, y_0)$ матиме вигляд:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff x}{\diff t} = (\epsilon_1 - \gamma_1 y_0 - 2 \beta_1 x_0) \cdot (x - x_0) - \gamma_1  x_0 \cdot (y - y_0), \\
+    \frac{\diff y}{\diff t} = \gamma_2  x_0 \cdot (y - y_0) - (\epsilon_2 - \gamma_2 y_0) \cdot (x - x_0),
+\end{aligned}
+\right.
+\end{equation}
+
+Для точки $(0, 0)$:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff x}{\diff t} = \epsilon_1 x, \\
+    \frac{\diff y}{\diff t} = - \epsilon_2 y,
+\end{aligned}
+\right.
+\end{equation}
+ситуація не змінилася, точка все ще сідло. \\
+
+Для точки $(\epsilon_1 / \beta_1, 0)$:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff x}{\diff t} &= - \epsilon_1 x \left( x - \frac{\epsilon_1}{\beta_1} \right) - \frac{\gamma_1 \epsilon_1}{\beta_1} \cdot y, \\
+    \frac{\diff y}{\diff t} &= \left( - \epsilon_2 + \frac{\gamma_2 \epsilon_1}{\beta_1} \right) \cdot y.
+\end{aligned}
+\right.
+\end{equation}
+
+Робимо заміну змінних $x - \epsilon_1 / \beta_1 = u$, тоді система набуває вигляду
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff u}{\diff t} &= - \epsilon_1 u - \frac{\gamma_1 \epsilon_1}{\beta_1} \cdot y, \\
+    \frac{\diff y}{\diff t} &= \frac{- \epsilon_2 \beta_1 + \gamma_2 \epsilon_1}{\beta_1} \cdot y,
+\end{aligned}
+\right.
+\end{equation}
+
+/* обчислення характеристичного многочлена як визначника і власних чисел */ \\
+
+звідки $\lambda_1 = - \epsilon_1 < 0$, $\lambda_2 = \dfrac{\gamma_2 \epsilon_1 - \epsilon_2 \beta_1}{\beta_1} > 0$, ще одне сідло. \\
+
+Для точки $(\epsilon_2 / \gamma_2, (\epsilon_1 \gamma_2 - \beta_1 \epsilon_2) / (\gamma_1 \gamma_2))$:
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff x}{\diff t} &= \left( \epsilon_1 - \frac{\epsilon_1 \gamma_2 - \beta_1 \epsilon_2}{\gamma_2} - 2 \frac{\beta_1}{\epsilon_2}{\gamma_2} \right) \cdot (x - x^*) - \frac{\gamma_1 \epsilon_2}{\gamma_2} \cdot (y - y^*), \\
+    \frac{\diff y}{\diff t} &= \frac{\epsilon_1 \gamma_2 - \beta_1 \epsilon_2}{\gamma_1} \cdot (x - x^*) .
+\end{aligned}
+\right.
+\end{equation}
+
+Робимо заміну змінних $x - x^* = u$, $y - y^* = v$, тоді система набуває вигляду
+\begin{equation}
+    \left\{
+    \begin{aligned}
+    \frac{\diff u}{\diff t} &= \frac{\beta_1 \epsilon_2 - 2 \beta_1 \epsilon_2}{\gamma_2} \cdot u - \frac{\gamma_1 \epsilon_2}{\gamma_2} \cdot v, \\
+    \frac{\diff v}{\diff t} &= \frac{\epsilon_1 \gamma_2 - \beta_1 \epsilon_2}{\gamma_1} \cdot u,
+\end{aligned}
+\right.
+\end{equation}
+
+/* обчислення характеристичного многочлена як визначника і власних чисел */ \\
+
+звідки $\lambda_{1,2} = \frac12 \left( - \frac{\epsilon_2 \beta_1}{\gamma_2} \pm \sqrt{\frac{\epsilon_2^2 \beta_1^2}{\gamma_2^2} - 4 \frac{\epsilon_1 \gamma_2 - \beta_1 \epsilon_2}{\gamma_2 \epsilon_2} } \right)$, тобто $Re \lambda_{1, 2} < 0$, стійка, тобто всі траєкторії з часом будуть збігатися до неї.
+
+\subsection{Класична модель епідемії}
+
+Однією з найпростіших моделей епідемії є модель Кермака-Маккендрика (1927 р.). \\
+
+Нехай $N_1(t)$ -- частка населення, що сприймає зараження, $N_2(t)$ -- частка населення, що вже заражена, $N_3(t)$ -- частка населення, яка не сприймає зараження завдяки виробленому імунітету. Кількість людей що знову заражаються пропорційна $N_1 \cdot N_2$; якщо швидкість росту числа не сприятливих до зараження пропорційна числу заражених, то математичну модель можна записати ось в такому вигляді:
+\begin{equation}
+    \label{eq:2.4}
+    \left\{
+        \begin{aligned}
+            \frac{\diff N_1}{\diff t} &= - N_1 \cdot N_2, \\
+            \frac{\diff N_2}{\diff t} &= - N_2 \cdot (1 - N_1), \\
+            \frac{\diff N_3}{\diff t} &= N_2.
+        \end{aligned}
+    \right.
+\end{equation}
+
+Для простоти коефіцієнти пропорційності покладено рівними одиниці. \\
+
+Якщо почленно додати всі ці рівності, то отримаємо
+\begin{equation}
+    \dot N_1 + \dot N_2 + \dot N_3 = 0 \implies N_1 + N_2 + N_3 = const.
+\end{equation}
+
 \end{document}
