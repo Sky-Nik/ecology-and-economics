@@ -44,7 +44,8 @@ for x_l, x_r, y_l, y_r in [(0.01, 1, 0.01, 1),
 		return d * x - c * np.log(x) + b * y - a * np.log(y)
 
 	plt.contour(x_space, y_space, v(x_space, y_space),
-		[v(x_l + (x_s - x_l) * t, y_l + (y_s - y_l) * t) for t in np.arange(.95, .05, -.05)])
+		[v(x_l + (x_s - x_l) * t, y_l + (y_s - y_l) * t) 
+		for t in np.arange(.95, .05, -.05)])
 
 	plt.scatter(x_s, y_s, s=100, c='k', label=f'Stationary point:\n'
 		f'$x = {x_s:.2f}, y = {y_s:.2f}$.')
