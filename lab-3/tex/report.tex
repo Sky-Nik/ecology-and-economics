@@ -1,0 +1,43 @@
+% cd ..\..\Users\NikitaSkybytskyi\Desktop\c3s2\ecology-and-economics\lab-3\tex
+% cls && pdflatex -shell-escape report.tex && cls && pdflatex -shell-escape report.tex && del report.aux, report.toc, report.log, report.out && start report.pdf
+\input{lab.sty}
+
+\begin{document}
+
+\cover{3}{Попит та пропозиція. Ринкова рівновага. \\ Стабільність рівноваги. Вплив дотації}
+
+\tableofcontents
+
+\section{Теоретичні відомості}
+
+
+
+\section{Чисельне моделювання}
+
+Було використано мову програмування \texttt{Python} і модуль \texttt{scipy}.
+
+\subsection{Код}
+
+\inputminted{python}{lab-3/py/all.py}
+% \inputminted{python}{../py/all.py}
+
+\subsection{Графіки}
+
+\begin{figure}{H}
+	\centering
+	\includegraphics[width=\textwidth]{p_q.png}
+\end{figure}
+
+\begin{figure}{H}
+	\centering
+	\includegraphics[width=\textwidth]{q_p.png}
+\end{figure}
+
+\begin{figure}{H}
+	\centering
+	\includegraphics[width=\textwidth]{dotation.png}
+\end{figure}
+
+Як бачимо, отримані результати відповідають теоретичним очікуванням.
+
+\end{document}

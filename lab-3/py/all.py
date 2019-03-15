@@ -5,6 +5,7 @@ from scipy.optimize import curve_fit, root_scalar
 import numpy as np
 from typing import Callable
 
+
 df = pd.DataFrame({
 	'price': [1.2, 1.7, 2.5, 2.9, 3.5, 4.2, 4.8, 5.5],
 	'demand': [122, 97, 77, 56, 43, 36, 27, 17],
@@ -50,6 +51,7 @@ df_interp = pd.DataFrame({
 
 p = root_scalar(lambda t: f['demand_exp'](t) - f['supply_lin'](t), x0=20, x1=125).root
 q = (f['demand_exp'](p) + f['supply_lin'](p)) / 2
+
 
 plt.figure(figsize=(20,20))
 plt.scatter(df['price'], df['demand'], s=100, 
