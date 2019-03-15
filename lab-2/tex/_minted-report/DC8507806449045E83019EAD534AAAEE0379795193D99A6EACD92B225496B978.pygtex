@@ -1,0 +1,50 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+ch}{\PYGZsh{}!/usr/bin/env python}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k+kn}{as} \PYG{n+nn}{plt}
+
+\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{c}\PYG{p}{,} \PYG{n}{d} \PYG{o}{=} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{,} \PYG{l+m+mi}{30}
+
+
+\PYG{k}{def} \PYG{n+nf}{dxdt}\PYG{p}{(}\PYG{n}{x}\PYG{p}{:} \PYG{n+nb}{float}\PYG{p}{,} \PYG{n}{y}\PYG{p}{:} \PYG{n+nb}{float}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n+nb}{float}\PYG{p}{:}
+	\PYG{k}{return} \PYG{n}{x} \PYG{o}{*} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b} \PYG{o}{*} \PYG{n}{y}\PYG{p}{)}
+
+
+\PYG{k}{def} \PYG{n+nf}{dydt}\PYG{p}{(}\PYG{n}{x}\PYG{p}{:} \PYG{n+nb}{float}\PYG{p}{,} \PYG{n}{y}\PYG{p}{:} \PYG{n+nb}{float}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n+nb}{float}\PYG{p}{:}
+	\PYG{k}{return} \PYG{n}{y} \PYG{o}{*} \PYG{p}{(}\PYG{n}{d} \PYG{o}{*} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{c}\PYG{p}{)}
+
+
+\PYG{n}{delta} \PYG{o}{=} \PYG{o}{.}\PYG{l+m+mi}{1}
+
+\PYG{n}{s} \PYG{o}{=} \PYG{l+m+mi}{50}
+
+\PYG{n}{x\PYGZus{}s}\PYG{p}{,} \PYG{n}{y\PYGZus{}s} \PYG{o}{=} \PYG{n}{c} \PYG{o}{/} \PYG{n}{d}\PYG{p}{,} \PYG{n}{a} \PYG{o}{/} \PYG{n}{b}
+
+\PYG{k}{for} \PYG{n}{x\PYGZus{}l}\PYG{p}{,} \PYG{n}{x\PYGZus{}r}\PYG{p}{,} \PYG{n}{y\PYGZus{}l}\PYG{p}{,} \PYG{n}{y\PYGZus{}r} \PYG{o+ow}{in} \PYG{p}{[(}\PYG{l+m+mf}{0.01}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} 
+	\PYG{p}{(}\PYG{n}{x\PYGZus{}s} \PYG{o}{\PYGZhy{}} \PYG{n}{delta}\PYG{p}{,} \PYG{n}{x\PYGZus{}s} \PYG{o}{+} \PYG{n}{delta}\PYG{p}{,} \PYG{n}{y\PYGZus{}s} \PYG{o}{\PYGZhy{}} \PYG{n}{delta}\PYG{p}{,} \PYG{n}{y\PYGZus{}s} \PYG{o}{+} \PYG{n}{delta}\PYG{p}{)]:}
+	\PYG{n}{x\PYGZus{}space}\PYG{p}{,} \PYG{n}{y\PYGZus{}space} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{meshgrid}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{n}{x\PYGZus{}l}\PYG{p}{,} \PYG{n}{x\PYGZus{}r}\PYG{p}{,} \PYG{p}{(}\PYG{n}{x\PYGZus{}r} \PYG{o}{\PYGZhy{}} \PYG{n}{x\PYGZus{}l}\PYG{p}{)} \PYG{o}{/} \PYG{n}{s}\PYG{p}{),} 
+		\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{n}{y\PYGZus{}l}\PYG{p}{,} \PYG{n}{y\PYGZus{}r}\PYG{p}{,} \PYG{p}{(}\PYG{n}{y\PYGZus{}r} \PYG{o}{\PYGZhy{}} \PYG{n}{y\PYGZus{}l}\PYG{p}{)} \PYG{o}{/} \PYG{n}{s}\PYG{p}{))}
+
+	\PYG{n}{u} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{dxdt}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{],} \PYG{n}{y\PYGZus{}space}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{])} \PYGZbs{}
+		\PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])])}
+
+	\PYG{n}{v} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{dydt}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{],} \PYG{n}{y\PYGZus{}space}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{])} \PYGZbs{}
+		\PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])])}
+
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{,}\PYG{l+m+mi}{20}\PYG{p}{))}
+
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{n}{f}\PYG{l+s+s1}{\PYGZsq{}Phase portrait on \PYGZdl{}[\PYGZob{}x\PYGZus{}l:.2f\PYGZcb{}, \PYGZob{}x\PYGZus{}r:.2f\PYGZcb{}] \PYGZsq{}}
+		\PYG{n}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{times [\PYGZob{}y\PYGZus{}l:.2f\PYGZcb{}, \PYGZob{}y\PYGZus{}r:.2f\PYGZcb{}]\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{20}\PYG{p}{)}
+	
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}x\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{)}
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}y\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{)}
+
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{quiver}\PYG{p}{(}\PYG{n}{x\PYGZus{}space}\PYG{p}{,} \PYG{n}{y\PYGZus{}space}\PYG{p}{,} \PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hypot}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}
+
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{x\PYGZus{}s}\PYG{p}{,} \PYG{n}{y\PYGZus{}s}\PYG{p}{,} \PYG{n}{s}\PYG{o}{=}\PYG{l+m+mi}{100}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}k\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{n}{f}\PYG{l+s+s1}{\PYGZsq{}Stationary point:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}
+		\PYG{n}{f}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}x = \PYGZob{}x\PYGZus{}s:.2f\PYGZcb{}, y = \PYGZob{}y\PYGZus{}s:.2f\PYGZcb{}\PYGZdl{}.\PYGZsq{}}\PYG{p}{)}
+
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+
+	\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{n}{f}\PYG{l+s+s1}{\PYGZsq{}../tex/phase\PYGZus{}\PYGZob{}x\PYGZus{}l:.2f\PYGZcb{}\PYGZus{}\PYGZob{}x\PYGZus{}r:.2f\PYGZcb{}\PYGZus{}\PYGZob{}y\PYGZus{}l:.2f\PYGZcb{}\PYGZus{}\PYGZob{}y\PYGZus{}r:.2f\PYGZcb{}\PYGZus{}\PYGZob{}s\PYGZcb{}.png\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}
