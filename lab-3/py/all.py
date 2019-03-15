@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import matplotlib.pyplot as plt
 import pandas as pd
-from scipy.optimize import curve_fit
+from scipy.optimize import curve_fit, root_scalar
 import numpy as np
 from typing import Callable
 
@@ -11,14 +11,7 @@ df = pd.DataFrame({
 	'supply': [20, 35, 59, 65, 78, 83, 95, 120],
 })
 
-
-class DemandLin(object):
-	def __init__(self, df: pd.DataFrame):
-		self.a, self.b = curve_fit(lambda t, a, b: a * t + b, 
-			df['price'], df['demand'])[0]
-	
-	def __call__(self, t: float) -> float:
-		return self.a * t + self.b
+p_l, p_r, q_l, q_r = 1, 6, 10, 130
 
 
 class SupplyLin(object):
@@ -29,12 +22,8 @@ class SupplyLin(object):
 	def __call__(self, t: float) -> float:
 		return self.a * t + self.b
 
-
-df_lin = pd.DataFrame({
-	'price': df['price'],
-	'demand': DemandLin(df)(df['price']),
-	'supply': SupplyLin(df)(df['price']),
-})
+	def __repr__(self):
+		return f'{self.a:.2f} * t + {self.b:.2f}'
 
 
 class DemandExp(object):
@@ -45,80 +34,95 @@ class DemandExp(object):
 	def __call__(self, t: float) -> float:
 		return self.a * np.exp(self.b * t)
 
-
-class SupplyExp(object):
-	def __init__(self, df: pd.DataFrame):
-		self.a, self.b = curve_fit(lambda t, a, b: a * np.exp(b * t), 
-			df['price'], df['supply'])[0]
-	
-	def __call__(self, t: float) -> float:
-		return self.a * np.exp(self.b * t)
+	def __repr__(self):
+		return f'{self.a:.2f} * exp({self.b:.2f} * t)'
 
 
-df_exp = pd.DataFrame({
-	'price': df['price'],
-	'demand': DemandExp(df)(df['price']),
-	'supply': SupplyExp(df)(df['price']),
+f = {'supply_lin': SupplyLin(df), 'demand_exp': DemandExp(df)}
+
+price_space = np.arange(1, 6, .01)
+
+df_interp = pd.DataFrame({
+	'price': price_space,
+	'demand': f['demand_exp'](price_space),
+	'supply': f['supply_lin'](price_space),
 })
 
+p = root_scalar(lambda t: f['demand_exp'](t) - f['supply_lin'](t), x0=20, x1=125).root
+q = (f['demand_exp'](p) + f['supply_lin'](p)) / 2
 
-class DemandLog(object):
-	def __init__(self, df: pd.DataFrame):
-		self.a, self.b = curve_fit(lambda t, a, b: a + b * np.log(t), 
-			df['price'], df['demand'])[0]
-	
-	def __call__(self, t: float) -> float:
-		return self.a + self.b * np.log(t)
-
-
-class SupplyLog(object):
-	def __init__(self, df: pd.DataFrame):
-		self.a, self.b = curve_fit(lambda t, a, b: a + b * np.log(t), 
-			df['price'], df['supply'])[0]
-	
-	def __call__(self, t: float) -> float:
-		return self.a + self.b * np.log(t)
-
-
-df_log = pd.DataFrame({
-	'price': df['price'],
-	'demand': DemandLog(df)(df['price']),
-	'supply': SupplyLog(df)(df['price']),
-})
-
-print(
-	f"ERROR [demand, lin]: {np.sum((df['demand'] - df_lin['demand'])**2)}\n"
-	f"ERROR [supply, lin]: {np.sum((df['supply'] - df_lin['supply'])**2)}\n"
-	f"ERROR [demand, exp]: {np.sum((df['demand'] - df_exp['demand'])**2)}\n"
-	f"ERROR [supply, exp]: {np.sum((df['supply'] - df_exp['supply'])**2)}\n"
-	f"ERROR [demand, log]: {np.sum((df['demand'] - df_log['demand'])**2)}\n"
-	f"ERROR [supply, log]: {np.sum((df['supply'] - df_log['supply'])**2)}"
-)
-
-
-# P Q
-plt.plot(df['price'], df['demand'], 'r-', label='demand, true')
-plt.plot(df['price'], df['supply'], 'b-', label='supply, true')
-plt.plot(df_lin['price'], df_lin['supply'], 'b--', label='supply, lin')
-plt.plot(df_exp['price'], df_exp['demand'], 'r-.', label='demand, exp')
-plt.title('True and interpolated supply and demand', fontsize=20)
+plt.figure(figsize=(20,20))
+plt.scatter(df['price'], df['demand'], s=100, 
+	marker='x', c='r', label='$Q_d(P)$, true')
+plt.scatter(df['price'], df['supply'], s=100, 
+	marker='x', c='b', label='$Q_s(P)$, true')
+plt.plot(df_interp['price'], df_interp['supply'], 
+	'b-', label='$Q_s(P)$', zorder=1)
+plt.plot(df_interp['price'], df_interp['demand'], 
+	'r-', label='$Q_d(P)$', zorder=1)
+plt.scatter(p, q, s=100, c='k', label=f'equilibrium, ({p:.2f}, {q:.2f})', zorder=2)
+plt.axvline(p, 0, (q - q_l) / (q_r - q_l), c='k', linestyle='--')
+plt.axhline(q, 0, (p - p_l) / (p_r - p_l), c='k', linestyle='--')
+plt.title('Лінії тренду у вісях $(P, Q)$', fontsize=20)
 plt.xlabel('$P$', fontsize=16)
 plt.ylabel('$Q$', fontsize=16)
-plt.legend()
+plt.xlim((p_l, p_r))
+plt.ylim((q_l, q_r))
+plt.legend(loc='right', fontsize=16)
 plt.grid(True)
-plt.get_current_fig_manager().full_screen_toggle() 
-plt.show()
+plt.savefig('../tex/img/p_q.png')
 
 
-# Q P
-plt.plot(df['demand'], df['price'], 'r-', label='demand, true')
-plt.plot(df['supply'], df['price'], 'b-', label='supply, true')
-plt.plot(df_lin['supply'], df_lin['price'], 'b--', label='supply, lin')
-plt.plot(df_exp['demand'], df_exp['price'], 'r-.', label='demand, exp')
-plt.title('True and interpolated supply and demand', fontsize=20)
+plt.figure(figsize=(20,20))
+plt.scatter(df['demand'], df['price'], s=100, 
+	marker='x', c='r', label='$Q_d(P)$, true')
+plt.scatter(df['supply'], df['price'], s=100, 
+	marker='x', c='b', label='$Q_s(P)$, true')
+plt.plot(df_interp['supply'], df_interp['price'], 
+	'b-', label='$Q_s(P)$', zorder=1)
+plt.plot(df_interp['demand'], df_interp['price'], 
+	'r-', label='$Q_d(P)$', zorder=1)
+plt.scatter(q, p, s=100, c='k', label=f'equilibrium, ({q:.2f}, {p:.2f})', zorder=2)
+plt.axvline(q, 0, (p - p_l) / (p_r - p_l), c='k', linestyle='--')
+plt.axhline(p, 0, (q - q_l) / (q_r - q_l), c='k', linestyle='--')
+plt.title('Лінії тренду у вісях $(Q, P)$', fontsize=20)
 plt.xlabel('$Q$', fontsize=16)
 plt.ylabel('$P$', fontsize=16)
-plt.legend()
+plt.xlim((q_l, q_r))
+plt.ylim((p_l, p_r))
+plt.legend(loc='right', fontsize=16)
 plt.grid(True)
-plt.get_current_fig_manager().full_screen_toggle() 
-plt.show()
+plt.savefig('../tex/img/q_p.png')
+
+
+dotation = .5
+
+df_dot = pd.DataFrame({
+	'price': price_space,
+	'demand': f['demand_exp'](price_space),
+	'supply': f['supply_lin'](price_space + dotation),
+})
+
+p = root_scalar(lambda t: f['demand_exp'](t) - f['supply_lin'](t + dotation), 
+	x0=p_l, x1=p_r).root
+q = (f['demand_exp'](p) + f['supply_lin'](p + dotation)) / 2
+
+
+plt.figure(figsize=(20,20))
+plt.plot(df_dot['supply'], df_dot['price'], 
+	'b-', label='$Q_s(P)$', zorder=1)
+plt.plot(df_dot['demand'], df_dot['price'], 
+	'r-', label='$Q_d(P)$', zorder=1)
+plt.plot(df_interp['supply'], df_interp['price'], 
+	'b--', label='$Q_s^{dot}(P)$', zorder=1)
+plt.scatter(q, p, s=100, c='k', label=f'equilibrium, ({q:.2f}, {p:.2f})', zorder=2)
+plt.axvline(q, 0, (p - p_l) / (p_r - p_l), c='k', linestyle='--')
+plt.axhline(p, 0, (q - q_l) / (q_r - q_l), c='k', linestyle='--')
+plt.title(f'Вплив дотації, $dot={dotation}$', fontsize=20)
+plt.xlabel('$Q$', fontsize=16)
+plt.ylabel('$P$', fontsize=16)
+plt.xlim((q_l, q_r))
+plt.ylim((p_l, p_r))
+plt.legend(loc='right', fontsize=16)
+plt.grid(True)
+plt.savefig('../tex/img/dotation.png')

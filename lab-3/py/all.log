@@ -1,0 +1,15 @@
+Functions:
+        demand_lin: -23.59 * t + 136.93
+        supply_lin: 21.17 * t + -0.22
+        demand_exp: 204.17 * exp(-0.43 * t)
+        supply_exp: 25.00 * exp(0.29 * t)
+        demand_log: 134.41 + ln(-69.36 * t)
+        supply_log: 4.31 + ln(60.14 * t)
+
+Errors:
+        demand_lin: 576.4686878332142
+        supply_lin: 186.41044004138013
+        demand_exp: 78.3348420330305
+        supply_exp: 496.38998228480307
+        demand_log: 496.38998228480307
+        supply_log: 282.5427446032933
