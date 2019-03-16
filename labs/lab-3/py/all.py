@@ -49,7 +49,7 @@ df_interp = pd.DataFrame({
 	'supply': f['supply_lin'](price_space),
 })
 
-p = root_scalar(lambda t: f['demand_exp'](t) - f['supply_lin'](t), x0=20, x1=125).root
+p = root_scalar(lambda t: f['demand_exp'](t) - f['supply_lin'](t), x0=p_l, x1=p_r).root
 q = (f['demand_exp'](p) + f['supply_lin'](p)) / 2
 
 
@@ -112,11 +112,11 @@ q = (f['demand_exp'](p) + f['supply_lin'](p + dotation)) / 2
 
 plt.figure(figsize=(20,20))
 plt.plot(df_dot['supply'], df_dot['price'], 
-	'b-', label='$Q_s(P)$', zorder=1)
+	'b-', label='$Q_s^{dot}(P)$', zorder=1)
 plt.plot(df_dot['demand'], df_dot['price'], 
 	'r-', label='$Q_d(P)$', zorder=1)
 plt.plot(df_interp['supply'], df_interp['price'], 
-	'b--', label='$Q_s^{dot}(P)$', zorder=1)
+	'b--', label='$Q_s(P)$', zorder=1)
 plt.scatter(q, p, s=100, c='k', label=f'equilibrium, ({q:.2f}, {p:.2f})', zorder=2)
 plt.axvline(q, 0, (p - p_l) / (p_r - p_l), c='k', linestyle='--')
 plt.axhline(p, 0, (q - q_l) / (q_r - q_l), c='k', linestyle='--')
