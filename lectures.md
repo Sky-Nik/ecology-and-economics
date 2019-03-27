@@ -1,33 +1,36 @@
-## Лекції
+## **Лекції**
 
-- [Усі лекції](all.pdf)
-- [Перша лекція: (тема)](01.pdf)
-- [Друга лекція: (тема)](02.pdf)
-- [Третя лекція: (тема)](03.pdf)
-- [Четверта лекція: (тема)](04.pdf)
-- [П'ята лекція: (тема)](05.pdf)
-- [Шоста лекція: (тема)](06.pdf)
-- [Сьома лекція: (тема)](07.pdf)
-- [Восьма лекція: (тема)](08.pdf)
-- [Дев'ята лекція: (тема)](09.pdf)
-- [Десята лекція: (тема)](10.pdf)
-- [Одинадцята лекція: (тема)](11.pdf)
-- [Дванадцята лекція: (тема)](12.pdf)
-- [Тринадцята лекція: (тема)](13.pdf)
+Усі лекції [To appear later on]
 
-## Презентації
+1. [To appear later on]
+2. [To appear later on]
+3. [To appear later on]
+4. [To appear later on]
+5. [To appear later on]
+6. [To appear later on]
+7. [To appear later on]
+8. [To appear later on]
+9. [To appear later on]
+10. [To appear later on]
+11. [To appear later on]
+12. [To appear later on]
+13. [To appear later on]
 
-- [Усі лекції](presentations/all.pdf)
-- [Перша лекція: (тема)](presentations/01.pdf)
-- [Друга лекція: (тема)](presentations/02.pdf)
-- [Третя лекція: (тема)](presentations/03.pdf)
-- [Четверта лекція: (тема)](presentations/04.pdf)
-- [П'ята лекція: (тема)](presentations/05.pdf)
-- [Шоста лекція: (тема)](presentations/06.pdf)
-- [Сьома лекція: (тема)](presentations/07.pdf)
-- [Восьма лекція: (тема)](presentations/08.pdf)
-- [Дев'ята лекція: (тема)](presentations/09.pdf)
-- [Десята лекція: (тема)](presentations/10.pdf)
-- [Одинадцята лекція: (тема)](presentations/11.pdf)
-- [Дванадцята лекція: (тема)](presentations/12.pdf)
-- [Тринадцята лекція: (тема)](presentations/13.pdf)
+## **Презентації**
+
+Усі презентації [To appear later on]
+
+1. [To appear later on]
+2. [To appear later on]
+3. [To appear later on]
+4. [To appear later on]
+5. [To appear later on]
+6. [To appear later on]
+7. [To appear later on]
+8. [To appear later on]
+9. [To appear later on]
+10. [To appear later on]
+11. [To appear later on]
+12. [To appear later on]
+13. [To appear later on]
+
