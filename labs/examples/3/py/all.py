@@ -94,7 +94,8 @@ plt.xlim((q_l, q_r))
 plt.ylim((p_l, p_r))
 plt.legend(loc='right', fontsize=16)
 plt.grid(True)
-plt.savefig('../tex/q_p.png', bbox_inches='tight')
+plt.show()
+# plt.savefig('../tex/q_p.png', bbox_inches='tight')
 
 
 dotation = .5
@@ -127,4 +128,5 @@ plt.xlim((q_l, q_r))
 plt.ylim((p_l, p_r))
 plt.legend(loc='right', fontsize=16)
 plt.grid(True)
-plt.savefig('../tex/dotation.png', bbox_inches='tight')
+plt.show()
+# plt.savefig('../tex/dotation.png', bbox_inches='tight')
