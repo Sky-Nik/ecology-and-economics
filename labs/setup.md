@@ -35,3 +35,7 @@ from package_name import *  # import everything from a package
 ### **Maple**
 
 [To appear later on]
+
+---
+
+[Назад на головну](../README.md)

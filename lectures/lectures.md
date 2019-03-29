@@ -34,3 +34,6 @@
 12. [To appear later on]
 13. [To appear later on]
 
+---
+
+[Назад на головну](../README.md)
