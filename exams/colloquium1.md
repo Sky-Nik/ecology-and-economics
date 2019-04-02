@@ -116,21 +116,21 @@
    Припустимо лінійність функцій переходів від однієї вікової групи до наступної і лінійність функції народжуваності, тобто
    
    $$
-   \begin{align}
+   \begin{align*}
    b_i(x) &= b_i \cdot x_i, \quad i = \overline{1, n}, \\
    s_i(x) &= s_i \cdot x_i, \quad i = \overline{1, n}.
-   \end{align}
+   \end{align*}
    $$
 
    Тоді отримаємо наступну дискретну систему яка описує динаміку популяції:
 
    $$
    \left\{
-   \begin{align}
+   \begin{align*}
    x_1(t + 1) &= \sum_{i = 1}^n b_i \cdot x_i, \\
    x_{i + 1}(t) &= s_i \cdot x_i, \quad i = \overline{1, n - 2}, \\
-   x_n(t + 1) = s_{n - 1} \cdot x_{n - 1}(t) + s_n \cdot x_n(t).
-   \end{align}
+   x_n(t + 1) &= s_{n - 1} \cdot x_{n - 1}(t) + s_n \cdot x_n(t).
+   \end{align*}
    \right.
    $$
 
@@ -143,7 +143,7 @@
    b_1 & b_2 & \cdots & b_{n - 1} & b_n \\
    s_1 & 0 & \cdots & 0 & 0 \\
    0 & s_2& \cdots & 0 & 0 \\
-   \vdots & \vdots & \ddots & \vdtos & \vdots \\
+   \vdots & \vdots & \ddots & \vdots & \vdots \\
    0 & 0 & \cdots & s_{n - 1} & s_n
    \end{pmatrix}
    $$
