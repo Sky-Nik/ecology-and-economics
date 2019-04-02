@@ -52,7 +52,7 @@ $$
 Її розв'язок при $$N(0) = N_0$$ має вигляд
 
 $$
-N(t) = K \cdot \left( \frac{N_0}{K} \right)^{\exp\left\{-\frac{N t}{\ln K}\right\}}.
+N(t) = K \cdot \left( \frac{N_0}{K} \right) \cdot \exp\left\{-\frac{N t}{\ln K}\right\}.
 $$
 
 Нескладно бачити, що $$N(t) \to K$$ при $$t \to \infty$$.
