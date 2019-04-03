@@ -4,11 +4,13 @@
 
 ### **Викладацький склад**
 
-Курс лекцій читається Коляновою Т.В.
+Курс лекцій читається Коляновою Т.В., `tania [dot] kolianova [at] gmail [dot] com`
 
 Практичні заняття проводять:
 - Колянова Т.В., `tania [dot] kolianova [at] gmail [dot] com`
 - Красовська К.К., `katerina [dot] krasovska [at] gmail [dot] com`
+
+Підтримкою цього сайту займається Скибицький Н.М., `n [dot] skybytskyi [at] gmail [dot] com`
 
 ### **Розподіл балів**
 
