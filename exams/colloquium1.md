@@ -128,7 +128,7 @@ $$
 \left\{
 \begin{align*}
 x_1(t + 1) &= \sum_{i = 1}^n b_i \cdot x_i, \\
-x_{i + 1}(t) &= s_i \cdot x_i, \quad i = \overline{1, n - 2}, \\
+x_{i + 1}(t + 1) &= s_i \cdot x_i(t), \quad i = \overline{1, n - 2}, \\
 x_n(t + 1) &= s_{n - 1} \cdot x_{n - 1}(t) + s_n \cdot x_n(t).
 \end{align*}
 \right.
