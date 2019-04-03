@@ -7,8 +7,8 @@
 Курс лекцій читається Коляновою Т.В.
 
 Практичні заняття проводять:
-- Колянова Т.В., `tania.kolianova [at] gmail [dot] com`
-- Красовська К.К., `katerina.krasovska [at] gmail [dot] com`
+- Колянова Т.В., `tania [dot] kolianova [at] gmail [dot] com`
+- Красовська К.К., `katerina [dot] krasovska [at] gmail [dot] com`
 
 ### **Розподіл балів**
 
