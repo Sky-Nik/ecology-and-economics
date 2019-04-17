@@ -1,38 +1,61 @@
-## **Лекції**
+<!--DEBUG-->
 
-Усі лекції [To appear later on]
+## Тут може бути **ваш** електронний конспект лекцій
 
-1. [To appear later on]
-2. [To appear later on]
-3. [To appear later on]
-4. [To appear later on]
-5. [To appear later on]
-6. [To appear later on]
-7. [To appear later on]
-8. [To appear later on]
-9. [To appear later on]
-10. [To appear later on]
-11. [To appear later on]
-12. [To appear later on]
-13. [To appear later on]
+Усі лекції
 
-## **Презентації**
+1. Лекція №1
 
-Усі презентації [To appear later on]
+2. Лекція №2
 
-1. [To appear later on]
-2. [To appear later on]
-3. [To appear later on]
-4. [To appear later on]
-5. [To appear later on]
-6. [To appear later on]
-7. [To appear later on]
-8. [To appear later on]
-9. [To appear later on]
-10. [To appear later on]
-11. [To appear later on]
-12. [To appear later on]
-13. [To appear later on]
+3. Лекція №3
+
+4. Лекція №4
+
+5. Лекція №5
+
+6. Лекція №6
+
+7. Лекція №7
+
+8. Лекція №8
+
+9. Лекція №9
+
+10. Лекція №10
+
+11. Лекція №11
+
+12. Лекція №12
+
+
+## Тут можуть бути ваші **презентації**
+
+Усі презентації
+
+1. Лекція №1
+
+2. Лекція №2
+
+3. Лекція №3
+
+4. Лекція №4
+
+5. Лекція №5
+
+6. Лекція №6
+
+7. Лекція №7
+
+8. Лекція №8
+
+9. Лекція №9
+
+10. Лекція №10
+
+11. Лекція №11
+
+12. Лекція №12
 
 ---
 

@@ -1,3 +1,5 @@
+<!--RELEASE-->
+
 ## **Технічні пререквізити**
 
 Лабораторні роботи нашого курсу можна виконувати на `Maple` та на `Python`. 
@@ -13,9 +15,13 @@
 - для [Linux](https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh)
 
 По ідеї всі необхідні вам для виконання всіх лабораторних робіт пакети все є у цьому дистрибутиві, але якщо ні то нові можна поставити виконавши `bash` команду
-`pip install --user package_name`
+```bash
+pip install --user package_name
+```
 або
-`pip install --user --upgrade package_name==version_number`
+```bash
+pip install --user --upgrade package_name==version_number
+```
 якщо вам потрібна якась конкретна версія пакету.
 
 Підключенння потрібного пакету у виконуваний файл відбувається одним з наступних рядків:
@@ -26,15 +32,21 @@ from package_name import *  # import everything from a package
 ```
 
 Вашу програму на `python`  можна виконати `bash`-командою
-`python program_name.py`
+```bash
+python program_name.py
+```
 або
-`program_name.py`
+```bash
+program_name.py
+```
 якщо ви використовуєте так званий шебанг, тобто якщо перший рядок файлу з вашою програмою має вигляд 
-`#!/usr/bin/env python`
+```python
+#!/usr/bin/env python
+```
 
 ### **Maple**
 
-[To appear later on]
+Із системою комп'ютерної алгебри Maple ви вже маєте бути знайомі з відповідного предмету що читаєтсья на другому курсі.
 
 ---
 
