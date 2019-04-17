@@ -49,7 +49,12 @@
 
 \subsection{Код}
 
-% \inputminted{python}{3/py/all.py}
+\inputminted[lastline=75]{python}{labs/examples/3/py/all.py}
+% \inputminted{python}{../py/all.py}
+
+Ми не наводимо тут код для побудови графіку у вісях $(Q, P)$ адже він цілком аналогічний коду для побудови графіку у вісях $(P,Q)$, тому одразу перейдемо до коду для впливу дотації:
+
+\inputminted[firstline=100]{python}{labs/examples/3/py/all.py}
 % \inputminted{python}{../py/all.py}
 
 \subsection{Аналітичні апроксимації}
@@ -68,18 +73,18 @@
     \end{tabular}
 \end{table}
 
-У зв'язку з цими значеннями було обрано лінійну залежність для пропозиції, а саме \[ Q_s(P) = 21.17 \cdot P + -0.22, \] і експоненціальну залежність для попиту, а саме \[ Q_d(P) = 204.17 \cdot \exp\left\{-0.43 \cdot P\right\}. \]
+У зв'язку з цими значеннями було обрано лінійну залежність для пропозиції і експоненціальну залежність для попиту.
 
 \subsection{Графіки}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{p_q.png}
+	\includegraphics[width=.9\textwidth]{p_q.png}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{q_p.png}
+	\includegraphics[width=.9\textwidth]{q_p.png}
 \end{figure}
 
 Як бачимо, отримані результати відповідають теоретичним очікуванням.
@@ -90,12 +95,11 @@
 \begin{align*} 
 	\left. \left| \dfrac{\diff Q_d}{\diff P} \right| \right|_{P = P^\star} &= \left. \left| -87.7931 \cdot \exp\left\{-0.43 \cdot P\right\} \right| \right|_{P = P^\star} = \\ 
 	&= \left. \left( 87.7931 \cdot \exp\left\{-0.43 \cdot P\right\} \right) \right|_{P = P^\star} = \\ 
-	&= 87.7931 \cdot \exp\left\{-0.43 \cdot 2.86\right\} \approx 25.6664.
+	&= 87.7931 \cdot \exp\left\{-0.43 \cdot 2.86\right\} \approx 25.6664. \\
+	\left. \dfrac{\diff Q_s}{\diff P} \right|_{P = P^\star} &= \left. 21.17 \right|_{P = P^\star} = 21.17.
 \end{align*}
 
-А також \[ \left. \dfrac{\diff Q_s}{\diff P} \right|_{P = P^\star} = \left. 21.17 \right|_{P = P^\star} = 21.17. \]
-
-Таким чином \[ \left. \left| \dfrac{\diff Q_d}{\diff P} \right| \right|_{P = P^\star} \approx 25.6664 > 21.17 = \left. \dfrac{\diff Q_s}{\diff P} \right|_{P = P^\star}, \] тому рівновага стійка.
+Таким чином $\left. \left| \dfrac{\diff Q_d}{\diff P} \right| \right|_{P = P^\star} \approx 25.6664 > 21.17 = \left. \dfrac{\diff Q_s}{\diff P} \right|_{P = P^\star}$, тому рівновага стійка.
 
 \subsection{Вплив дотації}
 
