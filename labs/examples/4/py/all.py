@@ -2,13 +2,12 @@
 import numpy as np
 import pandas as pd
 from scipy.optimize import curve_fit, minimize
-from typing import Callable, Tuple
 
 
 df = pd.DataFrame({
-	'capital': [2_860, 2_740, 2_950, 2_880, 2_510, 2_690, 2_990, 2_850, 3_000, 3_070],
-	'labor': [10_680, 10_310, 10_680, 10_800, 10_540, 10_420, 10_940, 10_710, 9_900, 9_930],
-	'production': [49_920, 47_750, 50_550, 50_570, 47_820, 47_900, 51_900, 45_970, 48_030, 48_100],
+	'capital': [2860, 2740, 2950, 2880, 2510, 2690, 2990, 2850, 3000, 3070],
+	'labor': [10680, 10310, 10680, 10800, 10540, 10420, 10940, 10710, 9900, 9930],
+	'production': [49920, 47750, 50550, 50570, 47820, 47900, 51900, 45970, 48030, 48100],
 })
 
 df[[0, 1]] = df[['capital', 'labor']]
@@ -30,6 +29,7 @@ class ProductionFunction(object):
 
 
 production_function = ProductionFunction(df)
+
 print(production_function)
 
 p, w_1, w_2 = 5, 2, 3
