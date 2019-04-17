@@ -16,7 +16,7 @@
 
 Можна обмежитися певною сім'єю параметризованих функцій. Часто зустрічаються наступні функції:
 \begin{align*}
-	F(K, L) &= A \cdot K^a \cdot L^{1 - a), \quad A, a > 0, \\
+	F(K, L) &= A \cdot K^a \cdot L^{1 - a}, \quad A, a > 0, \\
 	F(K, L) &= a \cdot K + b \cdot L, \quad a, b > 0, \\
 	F(K, L) &= a \cdot K \cdot L - b \cdot K^2 - c \cdot L^2, \quad a, b, c > 0, \\
 	F(K, L) &= a \cdot (b \cdot K + c \cdot L)^d, \quad a, b, c, d > 0, \\
@@ -76,30 +76,30 @@
 
 Частина коду яка за даними підбирає параметри для виробничої функції і визначає необхідні для подальшої оптимізації функції:
 
-% \inputminted[lastline=52]{python}{labs/examples/4/py/all.py}
-\inputminted[lastline=52]{python}{../py/all.py}
+\inputminted[lastline=52]{python}{labs/examples/4/py/all.py}
+% \inputminted[lastline=52]{python}{../py/all.py}
 
 Було отримано наступну апроксимацію виробничої функції: \[ Q(K, L) = 7.01 \cdot K^{0.31} \cdot L^{0.69}. \]
 
 \subsubsection{Максимізація прибутку}
 
-% \inputminted[firstline=56,lastline=73]{python}{labs/examples/4/py/all.py}
-\inputminted[firstline=56,lastline=73]{python}{../py/all.py}
+\inputminted[firstline=56,lastline=73]{python}{labs/examples/4/py/all.py}
+% \inputminted[firstline=56,lastline=73]{python}{../py/all.py}
 
-Було отримано наступний розв'язок: $K^\star \approx 15674$, $L^\star \approx 22883$. За таких витрат ресурсів обсяги виробництва $Q^\star \approx 142402$, а прибуток $\text{profit} \approx 612009$.
+Було отримано наступний розв'язок: $K^\star \approx 15674$, $L^\star \approx 22883$. За таких витрат ресурсів обсяги виробництва $Q^\star \approx 142402$, а прибуток $\approx 612009$.
 
 \subsubsection{Максимізація обсягів виробництва}
 
-% \inputminted[firstline=77,lastline=92]{python}{labs/examples/4/py/all.py}
-\inputminted[firstline=77,lastline=92]{python}{../py/all.py}
+\inputminted[firstline=77,lastline=92]{python}{labs/examples/4/py/all.py}
+% \inputminted[firstline=77,lastline=92]{python}{../py/all.py}
 
 Як вже зазначалося, для однорідних виробничих функцій розв'язки цієї і попередньої задач збігаються, що і було отримано у коді.
 
 \subsubsection{Мінімізація вартості виробництва}
 
-% \inputminted[firstline=96,lastline=112]{python}{labs/examples/4/py/all.py}
-\inputminted[firstline=96,lastline=112]{python}{../py/all.py}
+\inputminted[firstline=96,lastline=112]{python}{labs/examples/4/py/all.py}
+% \inputminted[firstline=96,lastline=112]{python}{../py/all.py}
 
-Було отримано наступний розв'язок: $K^\star \approx 6054$, $L^\star \approx 8838$. За таких витрат ресурсів вартість виробництва $\text{cost} \approx 38623$, а прибуток $\text{profit} \approx 236377$.
+Було отримано наступний розв'язок: $K^\star \approx 6054$, $L^\star \approx 8838$. За таких витрат ресурсів вартість виробництва $\approx 38623$, а прибуток $\approx 236377$.
 
 \end{document}
