@@ -50,7 +50,7 @@
   
 	- [Програмне забезпечення](labs/setup.md)
   
-	- [Власне умови](labs/tasks/README.md)
+	- [Умови та варіанти](labs/tasks/README.md)
   
 	- [Приклади звітів](labs/examples/README.md)
 
