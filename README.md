@@ -42,16 +42,16 @@
 
 ### **Власне матеріали курсу**
 
-- [Конспект лекцій](lectures/lectures.md)
+- [Конспект лекцій](lectures/README.md)
 
-- [Контрольні запитання](exams/exams.md)
+- [Контрольні запитання](exams/README.md)
 
 - Матеріали для лабораторних робіт:
   
 	- [Програмне забезпечення](labs/setup.md)
   
-	- [Власне умови](labs/tasks/tasks.md)
+	- [Власне умови](labs/tasks/README.md)
   
-	- [Приклади звітів](labs/examples/examples.md)
+	- [Приклади звітів](labs/examples/README.md)
 
-- [Література](books/books.md) (зокрема англомовна).
+- [Література](books/README.md) (зокрема англомовна).
