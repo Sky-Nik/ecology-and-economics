@@ -93,8 +93,8 @@ $$
 
 $$
 \begin{aligned}
-	u(\lambda x + (1 - \lambda) y) &\ge \lambda u(x) + (1 - \lambda) u(y), \quad \lambda \in [0, 1], \\
-	u(\lambda x + (1 - \lambda) y) &> \lambda u(x) + (1 - \lambda) u(y), \quad \lambda \in (0, 1).
+	u(\lambda \cdot x + (1 - \lambda) \cdot y) &\ge \lambda \cdot u(x) + (1 - \lambda) \cdot u(y), \quad \lambda \in [0, 1], \\
+	u(\lambda \cdot x + (1 - \lambda) \cdot y) &> \lambda \cdot u(x) + (1 - \lambda) \cdot u(y), \quad \lambda \in (0, 1).
 \end{aligned}
 $$
 
