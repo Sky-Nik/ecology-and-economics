@@ -504,7 +504,7 @@ $$
 Тоді
 
 $$
-\pi(x) = \lnagle p, F \rangle - \langle w, x \rangle = \displaystyle\sum\limits_{i = 1}^m p_i F_i(x^i) - \displaystyle\sum\limits_{j = 1}^m w_j \left( \displaystyle\sum\limits_{k=1}^n x_j^k \right).
+\pi(x) = \langle p, F \rangle - \langle w, x \rangle = \displaystyle\sum\limits_{i = 1}^m p_i F_i(x^i) - \displaystyle\sum\limits_{j = 1}^m w_j \left( \displaystyle\sum\limits_{k=1}^n x_j^k \right).
 $$
 
 Вважається, що кожен вид продукції є кінцевим і на використовується на виробництво інших видів продукції (_це вам не костриця коноплі_ 😆).
@@ -512,7 +512,7 @@ $$
 1. Якщо виробнича функція задана в явному вигляді, то можемо поставити задачу $$\pi(x) \to \max$$, і умови оптимальності будуть
 
 	$$
-	\frac{\parrtial \pi}{\partial x_j^i} = p_i \cdot \frac{\partial F_i(x^i)}{\partial x_j^i}  - w_j = 0.
+	\frac{\partial \pi}{\partial x_j^i} = p_i \cdot \frac{\partial F_i(x^i)}{\partial x_j^i}  - w_j = 0.
 	$$
 
 2. Якщо виробнича функція задана в неявному вигляді, тобто
