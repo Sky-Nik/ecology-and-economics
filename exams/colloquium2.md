@@ -377,8 +377,8 @@ $$
 
 	$$
 	\left\{
-	& \begin{aligned}
-	\frac{\partial L(x^\star, \lambda^\star)}{\partial x} = \frac{\mathrm{d} F(x^\star)}{\mathrm{d} x} - w = 0, \\
+	\begin{aligned}
+	& \frac{\partial L(x^\star, \lambda^\star)}{\partial x} = \frac{\mathrm{d} F(x^\star)}{\mathrm{d} x} - w = 0, \\
 	& \frac{\partial L(x^\star, \lambda^\star)}{\partial \lambda} = \text{TC} - \langle w, x \rangle = 0.
 	\end{aligned}
 	\right.
@@ -404,8 +404,8 @@ $$
 
 	$$
 	\left\{
-	& \begin{aligned}
-	\frac{\partial L(x^\star, \lambda^\star)}{\partial x} = w - \lambda \cdot \frac{\mathrm{d} F(x^\star)}{\mathrm{d} x} = 0, \\
+	\begin{aligned}
+	& \frac{\partial L(x^\star, \lambda^\star)}{\partial x} = w - \lambda \cdot \frac{\mathrm{d} F(x^\star)}{\mathrm{d} x} = 0, \\
 	& \frac{\partial L(x^\star, \lambda^\star)}{\partial \lambda} = q_0 - F(x) = 0.
 	\end{aligned}
 	\right.
