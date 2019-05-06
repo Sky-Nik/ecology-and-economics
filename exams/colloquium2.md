@@ -521,17 +521,7 @@ $$
 	\Phi(q, x) = \Phi(q_1, q_2, \ldots, q_n, x_1, x_2, \ldots, x_m) = 0,
 	$$
 
-	для якої виконується
-
-	$$
-	\frac{\partial \Phi}{\partial q_i} \le 0
-	$$
-
-	і
-
-	$$
-	\frac{\partial \Phi}{\partial x_j} \ge 0.
-	$$
+	для якої виконується $$\partial \Phi / \partial q_i \le 0$$ і $$\partial \Phi / \partial x_j \ge 0$$.
 
 	Для цієї задачі записується функція Лагранжа
 
