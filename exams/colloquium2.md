@@ -331,6 +331,87 @@ $$
 
 #### 4. Однопродуктова фірма (3 моделі поведінки фірми).
 
+Розгялнемо неокласичну теорію у якій фірма має задану виробничу функцію $$q = F(x)$$, задану ціну випуску, та задані ціни факторів виробництва (ресурів), причому вважаємо що фірма може регулювати свій попит на фактори виробництва.
+
+Можна поставити кілька задач, а саме:
+
+1. Максимізації прибутку:
+
+	$$
+	\pi = p \cdot F(x) - \displaystyle\sum\limits_{i = 1}^n w_i x_i \to \max,
+	$$
+
+	де $$x_i \ge 0$$. 
+
+	Якщо розглядати короткостроковий період, то до задачі додається обмеження на використання ресурсів: $$g(x) \le b$$, або, в загальнішому випадку
+
+	$$
+	g_j(x) = g_j(x_1, \ldots, x_m) \le b_j, \quad j = \overline{1, m},
+	$$
+
+	наприклад із лінійними обмеженнями вигляду $$g_j(x) = \langle c_j, x \rangle$$.
+
+	**Закон оптимального виробництва:**
+
+	$$
+	\frac{\text{MP}_1}{w_1} = \frac{\text{MP}_2}{w_2} = \ldots = \frac{\text{MP}_n}{w_n} = \frac{1}{p},
+	$$
+
+	де $$\text{MP}_i = \partial F(x) / \partial x_i$$, тобто граничний продукт (eng. _marginal product_), число яке визначає зміну обсягів виробництва на одиницю збільшення використання $$i$$-го ресурсу.
+
+2. Максимізації випуску продукції:
+
+	$$
+	F(x) \xrightarrow[\langle w, x \rangle \le \text{TC}]{} \max,
+	$$
+
+	де $$x_i \ge 0$$. 
+
+	Для цієї задачі будується функція Лагранжа
+
+	$$
+	L(x, \lambda) = F(x) + \lambda \left( \text{TC} - \langle w, x \rangle \right),
+	$$
+
+	а умови оптимальності мають вигляд
+
+	$$
+	\left\{
+	& \begin{aligned}
+	\frac{\partial L(x^\star, \lambda^\star)}{\partial x} = \frac{\mathrm{d} F(x^\star)}{\mathrm{d} x} - w = 0, \\
+	& \frac{\partial L(x^\star, \lambda^\star)}{\partial \lambda} = \text{TC} - \langle w, x \rangle = 0.
+	\end{aligned}
+	\right.
+	$$
+
+3. Задача мінімізації витрат:
+
+	Нехай заданий певний рівень випуску продукції $$q_0$$, оді маємо задачу
+
+	$$
+	\langle w, x \rangle \xrightarrow[F(x) \ge q_0]{} \min,
+	$$
+
+	де $$x_i \ge 0$$. 
+
+	Для цієї задачі також будується (вже інша) функція Лагранжа
+
+	$$
+	L(x, \lambda) = \langle w, x \rangle + \lambda (q_0 - F(x)),
+	$$
+
+	а умови оптимальності мають вигляд
+
+	$$
+	\left\{
+	& \begin{aligned}
+	\frac{\partial L(x^\star, \lambda^\star)}{\partial x} = w - \lambda \cdot \frac{\mathrm{d} F(x^\star)}{\mathrm{d} x} = 0, \\
+	& \frac{\partial L(x^\star, \lambda^\star)}{\partial \lambda} = q_0 - F(x) = 0.
+	\end{aligned}
+	\right.
+	$$
+
+
 #### 5. Монополія, монопсонія.
 
 #### 6. Дуополія Курно, Штаккельберга. Гадані варіації.
