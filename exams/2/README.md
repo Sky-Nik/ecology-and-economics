@@ -211,7 +211,7 @@ $$
 $$
 \left\{
 \begin{aligned}
-& \frac{\partial L(x^\star, \lambda^\star)}{\partial x} = Mu(x^\star) + \lambda^\star p \le 0, \\
+& \frac{\partial L(x^\star, \lambda^\star)}{\partial x} = Mu(x^\star) - \lambda^\star p \le 0, \\
 & \frac{\partial L(x^\star, \lambda^\star)}{\partial \lambda} = I - \langle p, x \rangle \ge 0, \\
 & \left\langle x^\star, \frac{\partial L(x^\star, \lambda^\star)}{\partial x} \right\rangle = \left\langle x^\star, Mu(x^\star) - \lambda^\star p \right\rangle = 0, \\
 & \lambda^\star \cdot \frac{\partial L(x^\star, \lambda^\star)}{\partial \lambda} = \lambda^\star \cdot (I - \langle p, x \rangle) = 0, \\
