@@ -14,7 +14,7 @@
 
 - Красовська К.К., `katerina тчк krasovska на gmail тчк com`
 
-Підтримкою цього сайту займається Скибицький Н.М., n.skybytskyi&#64;gmail.com
+Підтримкою цього сайту займається Скибицький Н.М., n.skybytsky<span style="font-family:monospace;">@</span>gmail.com
 
 ### Розподіл балів
 
