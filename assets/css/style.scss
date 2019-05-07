@@ -4,5 +4,6 @@
 @import "{{ site.theme }}";
 
 .page-header {
-	padding: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 0.01rem;
 }
