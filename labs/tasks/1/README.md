@@ -59,6 +59,6 @@ $$
 
 #### Варіанти
 
-[1](isolated/1.md) &emsp; [2](isolated/2.md) &emsp; [3](isolated/3.md) &emsp; [4](isolated/4.md) &emsp; [5](isolated/5.md) &emsp; [6](isolated/6.md)
+[1](leslie/1.md) &emsp; [2](leslie/2.md) &emsp; [3](leslie/3.md) &emsp; [4](leslie/4.md) &emsp; [5](leslie/5.md) &emsp; [6](leslie/6.md)
 
 [Назад на головну](../../README.md)
