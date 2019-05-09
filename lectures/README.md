@@ -4,6 +4,6 @@ _Зараз усі посилання не працюють, бо конспек
 
 Усі лекції: [pdf](00.pdf)
 
-[1](01.pdf) &emsp; [2](02.pdf) &emsp; [3](03.pdf) &emsp; [4](04.pdf) &emsp; [5](05.pdf) &emsp; [6](06.pdf) &emsp; [7](07.pdf) &emsp; [8](08.pdf) &emsp; [9](09.pdf) &emsp; [10](10.pdf) &emsp; [11](11.pdf) &emsp; [12](12.pdf) &emsp; [13](13.pdf) &emsp; [14](14.pdf) &emsp; [15](15.pdf)
+[1](01.pdf) &ensp; [2](02.pdf) &ensp; [3](03.pdf) &ensp; [4](04.pdf) &ensp; [5](05.pdf) &ensp; [6](06.pdf) &ensp; [7](07.pdf) &ensp; [8](08.pdf) &ensp; [9](09.pdf) &ensp; [10](10.pdf) &ensp; [11](11.pdf) &ensp; [12](12.pdf) &ensp; [13](13.pdf) &ensp; [14](14.pdf) &ensp; [15](15.pdf)
 
 [Назад на головну](../README.md)
