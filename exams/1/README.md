@@ -218,8 +218,8 @@ $$
 $$
 \left\{
 \begin{align*}
-\frac{\mathrm{d}x}{\mathrm{d}t} &= \varepsilon_1 \cdot x - \gamma_1 \cdot x \cdot y, \\
-\frac{\mathrm{d}y}{\mathrm{d}t} &= - \varepsilon_2 \cdot y + \gamma_2 \cdot x \cdot y,
+\dot x &= \varepsilon_1 \cdot x - \gamma_1 \cdot x \cdot y, \\
+\dot y &= - \varepsilon_2 \cdot y + \gamma_2 \cdot x \cdot y,
 \end{align*}
 \right.
 $$
@@ -251,8 +251,8 @@ $$
 $$
 \left\{
 \begin{align*}
-\frac{\mathrm{d}x}{\mathrm{d}t} &= \varepsilon_1 \cdot x - \gamma_1 \cdot x \cdot y - \beta_1 \cdot x^2, \\
-\frac{\mathrm{d}y}{\mathrm{d}t} &= - \varepsilon_2 \cdot y + \gamma_2 \cdot x \cdot y,
+\dot x &= \varepsilon_1 \cdot x - \gamma_1 \cdot x \cdot y - \beta_1 \cdot x^2, \\
+\dot y &= - \varepsilon_2 \cdot y + \gamma_2 \cdot x \cdot y,
 \end{align*}
 \right.
 $$
@@ -290,9 +290,9 @@ $$
 $$
 \left\{
 \begin{align*}
-\frac{\mathrm{d}N_1}{\mathrm{d}t} &= - N_1 \cdot N_2, \\
-\frac{\mathrm{d}N_2}{\mathrm{d}t} &= - N_2 \cdot (1 - N_1), \\
-\frac{\mathrm{d}N_3}{\mathrm{d}t} &= N_2.
+\dot N_1 &= - N_1 \cdot N_2, \\
+\dot N_2 &= - N_2 \cdot (1 - N_1), \\
+\dot N_3 &= N_2.
 \end{align*}
 \right.
 $$
@@ -310,9 +310,9 @@ $$
 $$
 \left\{
 \begin{align*}
-\frac{\mathrm{d}N_1}{\mathrm{d}t} &= - N_1(t) \cdot N_2(t - \tau_2) + N_3(t - \tau_1), \\
-\frac{\mathrm{d}N_2}{\mathrm{d}t} &= N_1(t) \cdot N_2 (t - \tau_2) - N_2(t), \\
-\frac{\mathrm{d}N_3}{\mathrm{d}t} &= N_2(t) - N_3(t - \tau_1).
+\dot N_1 &= - N_1(t) \cdot N_2(t - \tau_2) + N_3(t - \tau_1), \\
+\dot N_2 &= N_1(t) \cdot N_2 (t - \tau_2) - N_2(t), \\
+\dot N_3 &= N_2(t) - N_3(t - \tau_1).
 \end{align*}
 \right.
 $$
