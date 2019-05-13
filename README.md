@@ -4,9 +4,9 @@
 
 ### Викладацький склад
 
-Курс лекцій читає Колянова Тетяна Володимирівна.
+Лектор Колянова Тетяна Володимирівна.
 
-Практичні заняття проводять:
+Практики:
 
 - Колянова Тетяна Володимирівна, tania.kolianova<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Kolyanova-TV)
 
