@@ -12,7 +12,7 @@
 
 - Красовська Катерина Костянтинівна, katerina.krasovska<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Krasovska-KK)
 
-- Данильченко, [розклад](https://mytimetable.live/teacher/Danilchenko)
+- Даниленко Дарія Анатоліївна, ozar1024<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Danilchenko)
 
 Сайт і навчальні матеріали &mdash; Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
