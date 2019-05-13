@@ -4,15 +4,15 @@
 
 ### Викладацький склад
 
-Курс лекцій читається Коляновою Т.В., tania.kolianova<span style="font-family:monospace;">@</span>gmail.com
+Курс лекцій читається Коляновою Тетяна Володимирівна.
 
 Практичні заняття проводять:
 
-- Колянова Т.В., tania.kolianova<span style="font-family:monospace;">@</span>gmail.com
+- Колянова Тетяна Володимирівна, tania.kolianova<span style="font-family:monospace;">@</span>gmail.com
 
-- Красовська К.К., katerina.krasovska<span style="font-family:monospace;">@</span>gmail.com
+- Красовська Катерина Костянтинівна, katerina.krasovska<span style="font-family:monospace;">@</span>gmail.com
 
-Підтримкою цього сайту і навчальних матеріалів займається Скибицький Н.М., n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
+Підтримка сайту і навчальних матеріалів &mdash; Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
 ### Розподіл балів
 
