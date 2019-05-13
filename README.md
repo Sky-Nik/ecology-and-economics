@@ -1,6 +1,6 @@
 Вітаємо на сайті нормативного курсу &laquo;Екологічні та економічні процеси та їх моделювання&raquo; який читається у другому семестрі третього курсу на освітній програмі &laquo;Прикладна математика&raquo; факультету комп'ютерних наук та кібернетики Київського національного університету імені Тараса Шевченка.
 
-## Логістика курсу
+### Залік 5-го червня о 12:00 в аудиторії номер 42
 
 ### Викладацький склад
 
@@ -8,9 +8,11 @@
 
 Практичні заняття проводять:
 
-- Колянова Тетяна Володимирівна, tania.kolianova<span style="font-family:monospace;">@</span>gmail.com
+- Колянова Тетяна Володимирівна, tania.kolianova<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Kolyanova-TV)
 
-- Красовська Катерина Костянтинівна, katerina.krasovska<span style="font-family:monospace;">@</span>gmail.com
+- Красовська Катерина Костянтинівна, katerina.krasovska<span style="font-family:monospace;">@</span>gmail.com, [розклад](https://mytimetable.live/teacher/Krasovska-KK)
+
+- Данильченко, [розклад](https://mytimetable.live/teacher/Danilchenko)
 
 Підтримка сайту і навчальних матеріалів &mdash; Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
@@ -32,7 +34,7 @@
 
 _Розподіл балів на цей семестр &mdash; орієнтовний і може (несуттєво) змінюватися, стежте за останніми оновленнями на нашому сайті._
 
-### Власне матеріали курсу
+### Власне матеріали
 
 - [Конспект лекцій](lectures/README.md), _знаходиться в стані розробки._
 
