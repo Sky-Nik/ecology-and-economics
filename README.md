@@ -14,7 +14,7 @@
 
 - Данильченко, [розклад](https://mytimetable.live/teacher/Danilchenko)
 
-Підтримка сайту і навчальних матеріалів &mdash; Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
+Сайт і навчальні матеріали &mdash; Скибицький Нікіта Максимович, n.skybytskyi<span style="font-family:monospace;">@</span>gmail.com
 
 ### Розподіл балів
 
