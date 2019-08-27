@@ -1,41 +1,89 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="UTF-8">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 
-{% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  </head>
-  <body>
-    <header class="page-header" role="banner">
-      <h2 class="project-name">{{ site.title | default: site.github.repository_name }}</h2>
-      <h3 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h3>
-    </header>
+  <link rel="stylesheet" type="text/css" href="/mph/assets/css/style.scss">
 
-    <main id="content" class="main-content" role="main">
+  <meta charset="UTF-8">
+  {% seo %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <title>Екологічні і Економічні Процеси та їхнє Моделювання | Київський Національний Університет імені Тараса Шевченка</title>
+</head>
+<body >
+<header class="site-header" role="banner">
+  <nav class="navbar navbar-expand-md navbar-dark bg-aqua-gradient fixed-top">
+    <div class="container col-lg-8 col-md-10 col-12">
+      <a class="navbar-brand mr-4" href="/mph/">
+        {{ site.title | default: site.github.repository_name }}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+              aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/mph/lectures/"><span id="current">Лекції</span></a>
+          <a class="nav-item nav-link" href="/mph/control/"><span id="current">Питання</span></a>
+          <a class="nav-item nav-link" href="/mph/practice/control/"><span id="current">Практичні</span></a>
+          <a class="nav-item nav-link" href="/mph/books/"><span id="current">Література</span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main role="main" class="container col-lg-8 col-md-10 col-12">
+  <div class="row">
+    <div class="col-md-8">
       {{ content }}
-
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">
-          &copy; 2019 Київський національний університет імені Тараса Шевченка, Тетаня Колянова, Скибицький Нікіта
+    </div>
+    <div class="col-md-1">
+      <!--space between posts and sidebar-->
+    </div>
+    <div class="col-md-3">
+      <div class="content-section">
+        <span class="text-muted">
+          Наступний модуль відбудеться
         </span>
-      </footer>
-    </main>
-  </body>
-</html>
+        <br>
+        <span class="text-danger">
+          % % 2019&nbsp;р.
+        </span>
+      </div>
+      <div class="content-section text-danger">
+        <span class="text-muted">
+          Наступна практична контрольна робота відбудеться 
+        </span>
+        <br>
+        <span class="text-danger">
+          % % 2019&nbsp;р.
+        </span>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <span class="site-footer-owner">
+      <a href="{{ site.github.repository_url }}">
+        {{ site.github.repository_name }}
+      </a>
+      is maintained by
+      <a href="{{ site.github.owner_url }}">
+        {{ site.github.owner_name }}
+      </a>
+    </span>
+    <span class="site-footer-credits">
+      &copy; 2019 Київський національний університет імені Тараса Шевченка, <br>
+      Тетяна Колянова, Скибицький Нікіта
+    </span>
+    </footer>
+</main>
