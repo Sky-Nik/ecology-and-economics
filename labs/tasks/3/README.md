@@ -6,11 +6,24 @@
 
 Маємо результати спостережень за змінною величин попиту та пропозиції на ринку деякого товару:
 
-price | demand | supply
------ | ------ | ------
-  ... |    ... |    ... 
-  ... |    ... |    ... 
-  ... |    ... |    ... 
+<table>
+	<thead>
+		<tr>
+			<th>price</th> <th>demand</th> <th>supply</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>&hellip;</td> <td>&hellip;</td> <td>&hellip;</td>
+		</tr>
+		<tr>
+			<td>&hellip;</td> <td>&hellip;</td> <td>&hellip;</td>
+		</tr>
+		<tr>
+			<td>&hellip;</td> <td>&hellip;</td> <td>&hellip;</td>
+		</tr>
+	</tbody>
+</table>
 
 
 1. За цими даними знайти аналітичний вигляд функцій для попиту та пропозиції.
